@@ -1,0 +1,152 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactamplified-dev-213503-authRole",
+      "UnauthRoleArn": "arn:aws:iam::619747668685:role/amplify-reactamplified-dev-213503-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::619747668685:role/amplify-reactamplified-dev-213503-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactamplified-dev-213503-deployment",
+      "UnauthRoleName": "amplify-reactamplified-dev-213503-unauthRole",
+      "StackName": "amplify-reactamplified-dev-213503",
+      "StackId": "arn:aws:cloudformation:us-east-1:619747668685:stack/amplify-reactamplified-dev-213503/598b1690-365d-11ee-a487-0a108ac6c38f",
+      "AmplifyAppId": "d63ici66xnr6n",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-reactamplified-dev-213503-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactamplified-dev-213503-deployment/amplify-cfn-templates/hosting/template.json",
+        "logicalId": "hostingS3AndCloudFront"
+      },
+      "lastPushTimeStamp": "2023-08-17T05:12:17.492Z",
+      "output": {
+        "CloudFrontSecureURL": "https://d26bonaziogk1b.cloudfront.net",
+        "S3BucketSecureURL": "https://test-gpt-dc-30072023-dev.s3.amazonaws.com",
+        "CloudFrontOriginAccessIdentity": "E1T2MQQ30VWZA",
+        "WebsiteURL": "http://test-gpt-dc-30072023-dev.s3-website-us-east-1.amazonaws.com",
+        "CloudFrontDistributionID": "EL3XFIFNQ8ONK",
+        "Region": "us-east-1",
+        "HostingBucketName": "test-gpt-dc-30072023-dev",
+        "CloudFrontDomainName": "d26bonaziogk1b.cloudfront.net"
+      },
+      "lastPushDirHash": "hPsUum9vrYFGXpAM6ZMsk/ltsIY="
+    }
+  },
+  "auth": {
+    "reactamplified15ecc9c2": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactamplified-dev-213503-deployment/amplify-cfn-templates/auth/reactamplified15ecc9c2-cloudformation-template.json",
+        "logicalId": "authreactamplified15ecc9c2"
+      },
+      "lastPushTimeStamp": "2023-08-17T05:12:17.496Z",
+      "output": {
+        "UserPoolId": "us-east-1_DrkIkoKQA",
+        "AppClientIDWeb": "51d1i8utp9d48m77sgqq60ie4f",
+        "AppClientID": "5bqtcajmj2ugrdihigt8tdtjsg",
+        "IdentityPoolId": "us-east-1:94bec7ce-ef5c-4079-ae8a-47c66de9f989",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:619747668685:userpool/us-east-1_DrkIkoKQA",
+        "IdentityPoolName": "reactamplified15ecc9c2_identitypool_15ecc9c2__dev",
+        "UserPoolName": "reactamplified15ecc9c2_userpool_15ecc9c2"
+      },
+      "lastPushDirHash": "G6SKVQYyLGkjpPm8jShVOWcsYK4="
+    }
+  },
+  "function": {
+    "callToGPT": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-08-17T05:10:30.340Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-08-17T05:10:33.829Z",
+      "distZipFilename": "callToGPT-61736e743377594a456f-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-reactamplified-dev-213503-deployment",
+        "s3Key": "amplify-builds/callToGPT-61736e743377594a456f-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactamplified-dev-213503-deployment/amplify-cfn-templates/function/callToGPT-cloudformation-template.json",
+        "logicalId": "functioncallToGPT"
+      },
+      "lastPushTimeStamp": "2023-08-17T05:12:18.348Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::619747668685:role/reactamplifiedLambdaRole708867a6-dev",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:619747668685:function:callToGPT-dev",
+        "Name": "callToGPT-dev",
+        "LambdaExecutionRole": "reactamplifiedLambdaRole708867a6-dev"
+      },
+      "lastPushDirHash": "9PHWedZTHwq0KWLo4vTkmtJ6kO8="
+    }
+  },
+  "api": {
+    "apigpt": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "callToGPT",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactamplified-dev-213503-deployment/amplify-cfn-templates/api/apigpt-cloudformation-template.json",
+        "logicalId": "apiapigpt"
+      },
+      "lastPushTimeStamp": "2023-08-17T05:12:17.499Z",
+      "output": {
+        "ApiName": "apigpt",
+        "RootUrl": "https://8dd8u4svh6.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "8dd8u4svh6"
+      },
+      "lastPushDirHash": "IdwbW0ypuHfAdEnrhFa7/uFaQ4A="
+    }
+  },
+  "predictions": {
+    "speechGPT": {
+      "providerPlugin": "awscloudformation",
+      "service": "Polly",
+      "convertType": "speechGenerator",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactamplified-dev-213503-deployment/amplify-cfn-templates/predictions/speechGPT-template.json",
+        "logicalId": "predictionsspeechGPT"
+      },
+      "lastPushTimeStamp": "2023-08-17T05:12:17.501Z",
+      "output": {
+        "voice": "Mia",
+        "language": "es-MX",
+        "region": "us-east-1"
+      },
+      "lastPushDirHash": "LIl2Ux6Gb/m+eY1emzd381XM06g="
+    }
+  }
+}

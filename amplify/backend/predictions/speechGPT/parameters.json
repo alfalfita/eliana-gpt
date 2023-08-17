@@ -1,0 +1,14 @@
+{
+    "resourceName": "speechGPT",
+    "convertPolicyName": "speechGeneratorPolicy15cbdfc3",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "convertType": "speechGenerator",
+    "language": "es-MX",
+    "voice": "Mia",
+    "access": "auth"
+}

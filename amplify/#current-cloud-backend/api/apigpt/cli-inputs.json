@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "paths": {
+    "/call": {
+      "name": "/call",
+      "lambdaFunction": "callToGPT",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "update"
+        ]
+      }
+    }
+  }
+}
